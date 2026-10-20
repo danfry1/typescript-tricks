@@ -1,0 +1,27 @@
+name: check
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        typescript: ["7.0.2", "5.9.3"]
+    name: TypeScript ${{ matrix.typescript }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - name: Use TypeScript ${{ matrix.typescript }}
+        if: matrix.typescript != '7.0.2'
+        run: pnpm add -D --save-exact typescript@${{ matrix.typescript }}
+      - run: npx tsc --version
+      - run: pnpm check

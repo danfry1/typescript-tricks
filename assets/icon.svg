@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128" role="img" aria-label="typescript-tricks">
+  <rect width="128" height="128" rx="28" fill="#3178C6"/>
+  <g fill="none" stroke="#FFFFFF" stroke-width="10" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M38 38 L16 64 L38 90"/>
+    <path d="M90 38 L112 64 L90 90"/>
+    <path d="M46 66 L58 78 L82 50"/>
+  </g>
+</svg>

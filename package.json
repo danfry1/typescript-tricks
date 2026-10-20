@@ -1,0 +1,21 @@
+{
+  "name": "typescript-tricks",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Compile-time TypeScript tricks with no runtime code and no branded types.",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "check": "tsc -p scripts && node scripts/check.ts && node scripts/docs.ts --check",
+    "docs:sync": "node scripts/docs.ts"
+  },
+  "devDependencies": {
+    "@types/node": "24.19.2",
+    "lz-string": "1.5.0",
+    "typescript": "7.0.2"
+  },
+  "packageManager": "pnpm@11.24.0",
+  "engines": {
+    "node": ">=24"
+  }
+}
