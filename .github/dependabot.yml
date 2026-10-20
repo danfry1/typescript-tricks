@@ -1,0 +1,7 @@
+version: 2
+updates:
+  # Only GitHub Actions: TypeScript is pinned on purpose, because CI and the README name exact versions.
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: monthly
