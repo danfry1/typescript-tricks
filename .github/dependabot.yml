@@ -5,3 +5,10 @@ updates:
     directory: /
     schedule:
       interval: monthly
+    # Wait a week after a release, so a bad or hijacked version has time to be pulled.
+    cooldown:
+      default-days: 7
+    # One PR for all action bumps, since they all edit the same workflow lines.
+    groups:
+      actions:
+        patterns: ["*"]
